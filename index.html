@@ -372,6 +372,32 @@
     100%{transform:translateX(-50%);}
   }
 
+  /* ---------- Certifications ---------- */
+  .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .cert-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;display:flex;gap:16px;align-items:flex-start;
+    transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+  }
+  .cert-card:hover{transform:translateY(-6px);border-color:rgba(255,176,32,0.35);box-shadow:0 20px 44px -20px rgba(255,176,32,0.25);}
+  .cert-badge{
+    flex-shrink:0;width:52px;height:52px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:'Syne',sans-serif;font-weight:800;font-size:11px;line-height:1.1;color:#fff;
+    background:linear-gradient(135deg,var(--indigo),var(--pink));
+  }
+  .cert-card:nth-child(3n+2) .cert-badge{background:linear-gradient(135deg,var(--pink),var(--cyan));}
+  .cert-card:nth-child(3n+3) .cert-badge{background:linear-gradient(135deg,var(--cyan),var(--amber));}
+  .cert-body{min-width:0;}
+  .cert-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:4px;}
+  .cert-head h4{font-size:14.5px;}
+  .cert-date{
+    font-size:10px;color:var(--cyan);letter-spacing:.05em;text-transform:uppercase;
+    border:1px solid rgba(0,229,255,0.3);padding:2px 9px;border-radius:999px;white-space:nowrap;
+  }
+  .cert-issuer{font-size:12.5px;color:var(--amber);letter-spacing:.03em;margin-bottom:6px;}
+  .cert-tag{font-size:11px;color:var(--muted);word-break:break-word;}
+
   /* ---------- Projects ---------- */
   .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
   .project-card{
@@ -416,6 +442,7 @@
     .about-grid{grid-template-columns:1fr;}
     .skills-grid{grid-template-columns:1fr;}
     .project-grid{grid-template-columns:1fr;}
+    .cert-grid{grid-template-columns:1fr;}
     section{padding:90px 0;}
     .contact-panel{padding:44px 24px;}
   }
@@ -447,8 +474,9 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -468,7 +496,7 @@
       <div class="hero-stats reveal up">
         <div><b>3+</b><span>Years in IT Support</span></div>
         <div><b>1200</b><span>Staff Accounts Supported</span></div>
-        <div><b>6</b><span>Pro Certifications</span></div>
+        <div><b>15</b><span>Pro Certifications</span></div>
         <div><b>4</b><span>Languages Spoken</span></div>
       </div>
     </div>
@@ -606,6 +634,158 @@
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="wrap">
+    <span class="eyebrow reveal up">Credentials</span>
+    <h2 class="section-title reveal up">Certifications</h2>
+    <p class="section-sub reveal up">Fifteen credentials earned since 2021, spanning security, cloud administration, networking, service management, and project management concepts.</p>
+
+
+
+    <div class="cert-grid">
+      <div class="cert-card reveal up">
+        <div class="cert-badge">S+</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>CompTIA Security+</h4><span class="cert-date">Issued May 2025</span></div>
+          <div class="cert-issuer">Global Knowledge</div>
+          <div class="cert-tag">Credential ID: G013</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">N+</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>CompTIA Network+</h4><span class="cert-date">Issued Nov 2024</span></div>
+          <div class="cert-issuer">CompTIA</div>
+          <div class="cert-tag">Credential ID: 3FPC6LWP20DY</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">HCIA</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>HCIA-Security V4.0</h4><span class="cert-date">Issued Jan 2026</span></div>
+          <div class="cert-issuer">Huawei · Expires Dec 2036</div>
+          <div class="cert-tag">Credential ID: EBG20260117000003</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">Google</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Google IT Support Professional</h4><span class="cert-date">Issued Aug 2024</span></div>
+          <div class="cert-issuer">Google</div>
+          <div class="cert-tag">Credential ID: VW5VMUZYQ1JH</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">ITIL<br>4</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>ITIL® Foundation</h4><span class="cert-date">Issued Nov 2025</span></div>
+          <div class="cert-issuer">PeopleCert · Expires Nov 2028</div>
+          <div class="cert-tag">Change Management, IT Service Management +3</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">PM</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Agile Project Management</h4><span class="cert-date">Issued Oct 2025</span></div>
+          <div class="cert-issuer">Google · Coursera</div>
+          <div class="cert-tag">Scrum, Agile Project Management</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">AZ<br>104</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Microsoft Certified: Azure Administrator Associate</h4><span class="cert-date">Issued Jul 2025</span></div>
+          <div class="cert-issuer">Microsoft</div>
+          <div class="cert-tag">Identity &amp; Governance, Storage, Networking +3 badges</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">RH<br>124</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Red Hat System Administration I</h4><span class="cert-date">Issued May 2023</span></div>
+          <div class="cert-issuer">Red Hat</div>
+          <div class="cert-tag">Linux Administration · RH124</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">MS<br>900</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Microsoft 365 Certified: Fundamentals</h4><span class="cert-date">Issued May 2024</span></div>
+          <div class="cert-issuer">Microsoft</div>
+          <div class="cert-tag">MS365-900T01</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">Fiber</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Fiber Optic Testing, Inspection &amp; OTDR</h4><span class="cert-date">Issued Nov 2024</span></div>
+          <div class="cert-issuer">Fiber Optic Egypt (Wave Com Group)</div>
+          <div class="cert-tag">Credential ID: 71-24</div>
+        </div>
+      </div>
+
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">NSE</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Fortinet Certified Associate Cybersecurity</h4><span class="cert-date">Issued Sep 2024</span></div>
+          <div class="cert-issuer">Fortinet · Expires Sep 2026</div>
+          <div class="cert-tag">Network Security</div>
+        </div>
+      </div>
+
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">NSE</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Fortinet Certified Fundamentals Cybersecurity</h4><span class="cert-date">Issued Jul 2024</span></div>
+          <div class="cert-issuer">Fortinet · Expires Sep 2026</div>
+          <div class="cert-tag">Network Security</div>
+        </div>
+      </div>
+
+
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">MGMT</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Business Analysis &amp; Process Management</h4><span class="cert-date">Issued Jul 2022</span></div>
+          <div class="cert-issuer">Coursera</div>
+          <div class="cert-tag">Credential ID: IN0ZRE67B8Y3</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">DA</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Data Analysis Challenger Track</h4><span class="cert-date">Issued Sep 2021</span></div>
+          <div class="cert-issuer">egFWD · Udacity Nanodegree</div>
+          <div class="cert-tag">Credential ID: MLDTRATW</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal up">
+        <div class="cert-badge">DM</div>
+        <div class="cert-body">
+          <div class="cert-head"><h4>Digital Marketing Challenger Track</h4><span class="cert-date">Issued Aug 2021</span></div>
+          <div class="cert-issuer">egFWD · Udacity Nanodegree</div>
+          <div class="cert-tag">Credential ID: LLNRRDSC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
@@ -616,7 +796,7 @@
     <div class="skills-grid">
       <div>
         <div class="skill-block reveal up" data-level="92">
-          <div class="skill-top"><span>Networking &amp; Security (CCNA / Security+)</span><span>92%</span></div>
+          <div class="skill-top"><span>Networking &amp; Security (HCIA / Security+)</span><span>92%</span></div>
           <div class="skill-bar"><div class="skill-fill"></div></div>
         </div>
         <div class="skill-block reveal up" data-level="88">
@@ -638,7 +818,7 @@
           <div class="skill-bar"><div class="skill-fill"></div></div>
         </div>
         <div class="skill-block reveal up" data-level="70">
-          <div class="skill-top"><span>Cloud Fundamentals (AWS, AZ-104, MS-900)</span><span>70%</span></div>
+          <div class="skill-top"><span>Cloud Fundamentals (Azure AZ-104, MS-900)</span><span>70%</span></div>
           <div class="skill-bar"><div class="skill-fill"></div></div>
         </div>
         <div class="skill-block reveal up" data-level="82">
@@ -659,7 +839,7 @@
   <div class="marquee-outer">
     <div class="marquee-track" id="marqueeTrack">
       <span>
-        <em>Certified in</em>CompTIA A+ <em>·</em>CompTIA N+ <em>·</em>CompTIA Security+ <em>·</em>CCNA <em>·</em>CCNA Security <em>·</em>Red Hat System Administration I <em>·</em>ITIL® 4 Foundation <em>·</em>AWS Cloud Practitioner <em>·</em>Google IT Support <em>·</em>Fortinet NSE4 <em>·</em>Microsoft AZ-104 <em>·</em>Microsoft MS-900
+        <em>Certified in</em>CompTIA Security+ <em>·</em>CompTIA Network+ <em>·</em>Huawei HCIA-Security <em>·</em>ITIL® Foundation <em>·</em>Microsoft Azure Administrator Associate <em>·</em>Microsoft 365 Fundamentals <em>·</em>Red Hat RH124 <em>·</em>Fortinet Associate Cybersecurity <em>·</em>Google IT Support <em>·</em>Google Agile Project Management
       </span>
     </div>
   </div>
@@ -753,7 +933,7 @@ function animateRing(){
 }
 animateRing();
 
-document.querySelectorAll('a, button, .project-card, .info-card').forEach(el => {
+document.querySelectorAll('a, button, .project-card, .info-card, .cert-card').forEach(el => {
   el.addEventListener('mouseenter', () => cursorRing.classList.add('active'));
   el.addEventListener('mouseleave', () => cursorRing.classList.remove('active'));
 });
